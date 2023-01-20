@@ -13,8 +13,9 @@ textarea {
   padding: 10px;
   display: inline-block;
   height: 60px;
-  width: 1200px;
+  width: 6000px;
   position:relative;
+  left: 50px;
 }
 
 .jumbotron {
@@ -33,6 +34,8 @@ textarea {
   text-align: center;
   border-radius: 15px;
   display:inline-block;
+  position:absolute;
+  right: 20px;
 }
 
 .row {
