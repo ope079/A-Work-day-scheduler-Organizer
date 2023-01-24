@@ -74,6 +74,8 @@ $('.saveBtn').on('click', function(event){
     localStorage.setItem('inputs', inputs)
     inputs = JSON.parse(inputs)
 
+
+    // Extra, user feedback when they save the timeblock
     if(input){
         var message = $("<br><br><br><p>"+ input + " has been saved into the diary... </p>").fadeOut(3000)
         currentDay.append(message)
@@ -96,15 +98,13 @@ $('.saveBtn').on('click', function(event){
 // })
 //  if theres noo data in local storage, do nothing
 
-// Extra, user feedback when they save the timeblock
-// Extra, add hover on the save button
+
 $(document).ready(function() {
     var localStorageInput = localStorage.getItem('inputs')
     localStorageInput = JSON.parse(localStorageInput)
 if(localStorageInput){
     
     localStorageInput.forEach( function(input){
-        console.log(input.time)
         $('.time-block[data-hour="' + input.time + '"] textarea').val(input.input)
     })
 }
