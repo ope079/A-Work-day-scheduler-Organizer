@@ -74,8 +74,12 @@ $('.saveBtn').on('click', function(event){
     localStorage.setItem('inputs', inputs)
     inputs = JSON.parse(inputs)
 
-    var message = $("<br><br><br><p>"+ input + " has been saved into the diary... </p>").fadeOut(3000)
-    currentDay.append(message)
+    if(input){
+        var message = $("<br><br><br><p>"+ input + " has been saved into the diary... </p>").fadeOut(3000)
+        currentDay.append(message)
+    }
+
+    
 })
 
 // load input from local storage when page loads.refresh if theres any data in local storage
